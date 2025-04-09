@@ -2,6 +2,7 @@
 
 - type: linkedin
   icon: "fab fa-linkedin"
+  url: "https://www.linkedin.com/in/john-bury"
 
 - type: github
   icon: "fab fa-github"
