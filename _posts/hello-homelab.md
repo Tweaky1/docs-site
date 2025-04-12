@@ -52,5 +52,5 @@ _Command used in debian based systems to update repositories and install availab
 
 ## Photos
 
-![img-description](https://avatars.githubusercontent.com/u/13026946?v=4)
+![GitHub Profile](https://avatars.githubusercontent.com/u/13026946?v=4)
 _GitHub Profile Image for Test_
