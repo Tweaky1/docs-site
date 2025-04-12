@@ -5,7 +5,7 @@ order: 4
 ---
 
 ## Who Am I
-![Headshot](/assets/img/posts/BuryJ-139.jpg){: width="491" height="500" .w-50 .shadow .right}
+![Headshot](/assets/img/posts/BuryJ-139.jpg){: width="392" height="400" .w-50 .shadow .right}
 Hello my name is John Bury and currently I am an Intern at Nokia. I fell in love with technology at a very young age beginning with an intense passion for video games. I enjoyed the challenge they posed along with the competition it fueled between myself, friends, and family. That passion quickly turned into the question of, "How does this all work?" Along with that question I became interested in my Dad's work, as he was always working with computers and the things he would do fascinated me. Over time my interest in game development has gone away and turned to computers in general.
 
 I soon learned how to pick compatible parts and build my own computer (initially for playing games) and after that experience I began enveloping myself in all things technology. I started learning about networking, basic computer science topics, coding, and a little about security. Saving the long winded story, that brings us to today. I'm currently completing my Bachelor's in Information Technology online, and I've earned the CompTIA Network+, Security+, Cloud+, and the LPI Linux Essentials certification. 
