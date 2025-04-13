@@ -3,7 +3,7 @@ layout: post
 title: Modded Valheim Linux Server
 date: 2024-11-13 20:41:00 +-0000
 image: /assets/img/preview/valheim-preview.png
-description: Short tutorial to get a Valheim server up and running on Linux and a reminder to myself of how my current Valheim server installation is setup.
+description: Short tutorial to get a Valheim server up and running on Linux.
 categories: [Guide,Reminders]
 tags: [systemd,bash,games]
 ---
@@ -12,7 +12,7 @@ tags: [systemd,bash,games]
 
 [__steamcmd__](https://developer.valvesoftware.com/wiki/SteamCMD) is a command line tool required to manage any and all steam games you wish to host locally on a Linux based server, including Valheim. Ensure it is installed before proceeding. If you do not see __steamcmd__ listed in the output of the first command use the second to install it.
 
-> Examples are assuming you have a Debian based Linux distro using the `apt` package manager. Please use your provided distrobution's package manager and its syntax.
+> Examples are assuming you have a Debian based Linux distribution using the `apt` package manager. Please use your provided distribution's package manager and its syntax.
 {: .prompt-info }
 
 ```bash
@@ -35,7 +35,7 @@ steamcmd +login anonymous +force_install_dir /PATH/YOU/WANT/GAME/FILES +app_upda
 Once the game files have been downloaded save this command for later within a script. It can be run at a later time to update the game whenever the Valheim team releases a new version. I saved mine under `~/bin/update-valheim`. Mark your file as executable with `chmod` and you can stop there if you like. If you leave out the file extension, as I have done, you can add the script to your path and run the script as if it were a built-in command in your shell. Add this to the bottom of your `.bashrc` file:
 
 ```bash
-# adding custom scripts within the ~/bin directory to function simillar to built-in commands
+# adding custom scripts within the ~/bin directory to function similar to built-in commands
 export PATH=$PATH:~/bin
 ```
 {: file="~/.bashrc" }
@@ -48,7 +48,7 @@ All of your important game files will be stored under the path you specify withi
 
 The file used to start the server comes along with the download of the game, `start_server.sh`. The file itself has instructions written inside in the form of comments. Open up the file in your preferred text editing software and follow the instructions. It is highly recommended that you save a copy of the file locally, or in a separate folder on the server, incase Steam decides it wants to overwrite the file. I've never ran into that issue but it is always better to be safe than sorry. 
 
-Should you want to install mods to improve upon and change the vanilla Valheim experience in anyway; that will require the installation of __BepInEx__ on top of your Valheim install. You can download the files from either the __BepInEx__ [website](https://docs.bepinex.dev/index.html), or from the [GtiHub](https://github.com/BepInEx/BepInEx/releases) page for the project. I have found the GitHub page more straight forward to follow. Simply download the `.zip` file designated for your operating system and subsequent architecture. After downloading, unzip the file and copy the contents to the root of your game istallation. Following my own installation that is `~/steam/steamapps/common/valheim`. I do not remember if BepInEx comes with a pre-configured start up script. In the case it does not I have my script below as well.
+Should you want to install mods to improve upon and change the vanilla Valheim experience in anyway; that will require the installation of __BepInEx__ on top of your Valheim install. You can download the files from either the __BepInEx__ [website](https://docs.bepinex.dev/index.html), or from the [GtiHub](https://github.com/BepInEx/BepInEx/releases) page for the project. I have found the GitHub page more straight forward to follow. Simply download the `.zip` file designated for your operating system and subsequent architecture. After downloading, unzip the file and copy the contents to the root of your game installation. Following my own installation that is `~/steam/steamapps/common/valheim`. I do not remember if BepInEx comes with a pre-configured start up script. In the case it does not I have my script below as well.
 
 ```bash
 #!/usr/bin/env bash
@@ -79,7 +79,7 @@ exec ./valheim_server.x86_64 -name "NAME OF THE SERVER DISPLAYED IN GAME" -port 
 > At the time of writing the steps for installation when downloading BepInEx from their website seem to differ slightly. I have never followed this route. If you wish too please follow the documentation listed there.
 {: .prompt-info }
 
-To add mods to your server the configuration files can be found under `~/steam/steamapps/common/valheim/BepInEx`. In here you will find a `plugins` folder for storing specific binaries and additional files required to get mods up and running. Each individual mod will need its own folder to hold those files required for the mod to function. Using my installation as an example the path will look something like this: `~/steam/steamapps/common/valheim/BepInEx/plugins/FORLDER-FOR-MOD/MOD-FILE(s)`. Typically every mod is packaged as a `.zip` file and taking the output folder from unzipping it and adding it to the `plugins` folder will suffice. 
+To add mods to your server the configuration files can be found under `~/steam/steamapps/common/valheim/BepInEx`. In here you will find a `plugins` folder for storing specific binaries and additional files required to get mods up and running. Each individual mod will need its own folder to hold those files required for the mod to function. Using my installation as an example the path will look something like this: `~/steam/steamapps/common/valheim/BepInEx/plugins/FOLDER-FOR-MOD/MOD-FILE(s)`. Typically every mod is packaged as a `.zip` file and taking the output folder from unzipping it and adding it to the `plugins` folder will suffice. 
 
 ## systemd
 
@@ -113,7 +113,7 @@ You are just about ready to connect and play with your friends! The last few thi
 * Open ports `2456-2458` on your servers firewall (if the firewall is enabled)
 * Port forward those same ports through your gateway/router to your server
 * Give the public Ip assigned to your machine (if hosted in the cloud) or the public Ip of your home networks gateway (if hosted locally) to players
-* Enter that Ip address into the correct field on Valhiem and you are all set! 
+* Enter that Ip address into the correct field on Valheim and you are all set! 
 
 ### Updating the Game Server
 
