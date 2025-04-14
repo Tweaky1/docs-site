@@ -4,7 +4,7 @@ title: Create Above and Beyond Linux Server
 date: 2025-4-12 20:08:00 +-0000
 image: /assets/img/preview/caab-minecraft-preview.png
 description: Short tutorial to get a Minecraft server up and running on Linux with the Create Above and Beyond Modpack.
-categories: [Guide,Reminders]
+categories: [Guide,Game_Servers]
 tags: [systemd,bash,games,java]
 ---
 

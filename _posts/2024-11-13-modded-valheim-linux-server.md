@@ -4,7 +4,7 @@ title: Modded Valheim Linux Server
 date: 2024-11-13 20:41:00 +-0000
 image: /assets/img/preview/valheim-preview.png
 description: Short tutorial to get a Valheim server up and running on Linux.
-categories: [Guide,Reminders]
+categories: [Guide,Game_Servers]
 tags: [systemd,bash,games]
 ---
 
