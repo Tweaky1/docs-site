@@ -16,8 +16,13 @@ tags: [systemd,steamcmd,bash,games]
 {: .prompt-info }
 
 ```bash
+# Check for steamcmd
 which steamcmd
 
+# Update repositories and install and required updates
+sudo apt update && sudo apt upgrade -y
+
+# Install steamcmd
 sudo apt install steamcmd -y
 ```
 
