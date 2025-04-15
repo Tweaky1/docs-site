@@ -53,7 +53,7 @@ You need a folder on the server for your game files to reside. For example I hav
 
 Once the file is created make it executable using `chmod` and run the file with `./start-server.sh`. Even if everything was done correctly, it won't get very far and will immediately shutdown. During the first launch it will create a `eula.txt` file in the same directory as your `server.jar` and start script. Set the value within to `eula=true` to accept the End User License Agreement and your server will fully function when started up from here on out.
 
-To start the server using systemd you will need a unit file. Below is my configuration. Place the file in `/etc/systemd/system/`. Name the file whatever you like so long as it has the `.service` extension i.e. `minecraft.service`.
+To start the server using __systemd__ you will need a unit file. Below is my configuration. Place the file in `/etc/systemd/system/`. Name the file whatever you like so long as it has the `.service` extension i.e. `minecraft.service`.
 
 ```
 [Unit]
@@ -73,7 +73,7 @@ WantedBy=multi-user.target
 ```
 {: file="/etc/systemd/system/minecraft.service" }
 
-Replace "_USER_" with the user you want the service to run under, and change the "_WorkingDirectory_" path to that of your server installation. Then assuming you named the file `minecraft.service` use `sudo systemctl enable minecraft` to enable systemd to automatically start the service on boot. Use `sudo systemctl start minecraft` to start up the service for the very first time, from here on out you won't have to touch it unless updating or configuring game files. All basic server configuration is done within the `server.properties` file. If you chose a community version of the Minecraft server, they have their own specific configuration you can play around with as well. For example __Spigot__ has the `spigot.yml` file. To shutdown the server for a version update or if you wish to edit the config files us `sudo systemctl stop minecraft` make the necessary changes and start the server again with `sudo systemctl start minecraft`.
+Replace "_USER_" with the user you want the service to run under, and change the "_WorkingDirectory_" path to that of your server installation. Then assuming you named the file `minecraft.service` use `sudo systemctl enable minecraft` to enable __systemd__ to automatically start the service on boot. Use `sudo systemctl start minecraft` to start up the service for the very first time, from here on out you won't have to touch it unless updating or configuring game files. All basic server configuration is done within the `server.properties` file. If you chose a community version of the Minecraft server, they have their own specific configuration you can play around with as well. For example __Spigot__ has the `spigot.yml` file. To shutdown the server for a version update or if you wish to edit the config files us `sudo systemctl stop minecraft` make the necessary changes and start the server again with `sudo systemctl start minecraft`.
 
 You are just about done and ready to play the final touches will be:
 

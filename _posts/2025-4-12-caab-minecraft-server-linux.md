@@ -46,7 +46,7 @@ First you will need to download the server files from the modpack's CurseForge p
 
 ### systemd Service
 
-Once the files are up on your server all that is left to get it running is to create a systemd unit file for it. You will need to create a new file in the `/etc/systemd/system` directory. Name it what you like, to follow along use `sudo nano /etc/systemd/system/caabMinecraft.service`, or any text editor you like over nano.
+Once the files are up on your server all that is left to get it running is to create a __systemd__ unit file for it. You will need to create a new file in the `/etc/systemd/system` directory. Name it what you like, to follow along use `sudo nano /etc/systemd/system/caabMinecraft.service`, or any text editor you like over nano.
 
 ```bash
 [Unit]

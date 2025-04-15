@@ -5,7 +5,7 @@ date: 2024-11-13 20:41:00 +-0000
 image: /assets/img/preview/valheim-preview.png
 description: Short tutorial to get a Valheim server up and running on Linux.
 categories: [Guide,Game_Servers]
-tags: [systemd,bash,games]
+tags: [systemd,steamcmd,bash,games]
 ---
 
 ## Services and Required Knowledge
@@ -29,7 +29,7 @@ Once you have __steamcmd__ installed and have the necessary Steam ID you can run
 {: .prompt-warning }
 
 ```bash
-steamcmd +login anonymous +force_install_dir /PATH/YOU/WANT/GAME/FILES +app_update 896660 validate +exit
+steamcmd +force_install_dir /PATH/YOU/WANT/GAME/FILES +login anonymous +app_update 896660 validate +exit
 ```
 
 Once the game files have been downloaded save this command for later within a script. It can be run at a later time to update the game whenever the Valheim team releases a new version. I saved mine under `~/bin/update-valheim`. Mark your file as executable with `chmod` and you can stop there if you like. If you leave out the file extension, as I have done, you can add the script to your path and run the script as if it were a built-in command in your shell. Add this to the bottom of your `.bashrc` file:
@@ -76,7 +76,7 @@ exec ./valheim_server.x86_64 -name "NAME OF THE SERVER DISPLAYED IN GAME" -port 
 ```
 {: file="~/steam/steamapps/common/valheim/start_server_bepinex.sh" }
 
-> At the time of writing the steps for installation when downloading BepInEx from their website seem to differ slightly. I have never followed this route. If you wish too please follow the documentation listed there.
+> At the time of writing the steps for installation when downloading BepInEx from their website seem to differ slightly. I have never followed this route. If you wish too please follow the documentation listed [there](https://docs.bepinex.dev/index.html).
 {: .prompt-info }
 
 To add mods to your server the configuration files can be found under `~/steam/steamapps/common/valheim/BepInEx`. In here you will find a `plugins` folder for storing specific binaries and additional files required to get mods up and running. Each individual mod will need its own folder to hold those files required for the mod to function. Using my installation as an example the path will look something like this: `~/steam/steamapps/common/valheim/BepInEx/plugins/FOLDER-FOR-MOD/MOD-FILE(s)`. Typically every mod is packaged as a `.zip` file and taking the output folder from unzipping it and adding it to the `plugins` folder will suffice. 
