@@ -19,7 +19,7 @@ title: Homelab Documentation # the main title
 tagline: A Place to Document my Homelab # it will display as the subtitle
 
 description: >- # used by seo meta and the atom feed
-  A place to document the systems I have built within my homelab and anything I build along my journey. Currently includes games servers: Valheim Server hosted on Linux and a Minecraft Server hosted on Linux. I will soon document how I began hosting an Enshrouded Server on Linux, a Veloren Server on Linux, and a modded Minecraft Create Above and Beyond Server on Linux. There are also future plans for things like Moonlight/Sunshine, PiHole DNS, Homarr, and Nginx Proxy Manager.
+  A place to document the systems and services I use within my homelab and anything new I find along my journey. Consists of Linux systems, docker containers, game servers, and more.
 
 # Fill in the protocol & hostname for your site.
 # E.g. 'https://username.github.io', note that it does not end with a '/'.
