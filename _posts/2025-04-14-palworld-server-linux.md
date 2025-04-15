@@ -31,7 +31,7 @@ If the which command is successful and __steamcmd__ is already installed you wil
 Once __steamcmd__ is installed we can use the _Steam ID_ of Palworld's dedicated server to install the necessary files. Palworld's server ID is `2394010`. Run and save the below command to a file, this same command can be used at a later time to update the game. I saved mine to `~/bin/update-palworld`. If you decide to save it to a file you need to make it executable with `chmod 744 update-palworld`.
 
 ```bash
-steamcmd +force_install_dir /PATH/YOU/WANT/GAME/FILES app_update 2394010 validate +exit
+steamcmd +force_install_dir /PATH/YOU/WANT/GAME/FILES +login anonymous +app_update 2394010 validate +exit
 ```
 {: .file="~/bin/update-palworld" }
 
