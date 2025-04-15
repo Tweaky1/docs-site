@@ -19,7 +19,7 @@ tags: [systemd,steamcmd,bash,games]
 # Check for steamcmd
 which steamcmd
 
-# Update repositories and install and required updates
+# Update repositories and install required updates
 sudo apt update && sudo apt upgrade -y
 
 # Install steamcmd
